@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
+import Button from '@/components/Button/Button'
 
 
 export default function Home() {
@@ -13,11 +14,10 @@ export default function Home() {
         En HopeCare, nuestra misión es brindar apoyo,
         conocimiento y soluciones para las personas que viven con enfermedades raras y sus familias.
         </p>
-
-        <button className={styles.button}>Mira nuestro trabajo</button>
+        <Button url="/portafolio" text="Mira nuestro trabajo" />
 
       </div>
-      <div>
+      <div className={styles.item}>
         <img src="/hope.png" alt="" className={styles.img} />
       </div>
     </div>
