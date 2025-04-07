@@ -2,10 +2,22 @@ import React from 'react'
 import styles from './page.module.css'
 import Button from '@/components/Button/Button';
 import Image from 'next/image';
+import { items } from './data';
+import { notFound } from 'next/navigation';
+
+const getData = (cat)=>{
+  const data = items[cat]
+
+  if(data){
+    return data
+  }
+
+  return notFound()
+}
 
 
 const Category = ({params}) => {
-  console.log(params);
+  const data  = getData(params.Category)
   
   return (
     <div className={styles.container}>
